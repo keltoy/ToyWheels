@@ -3,11 +3,10 @@ package com.toy.wheels;
 /**
  * Created by toy on 7/31/16.
  */
-public class HeapSort {
+public class HeapSort implements Sort {
     public static void sort(int[] a) {
         buildMaxHeapify(a);
         heapSort(a);
-
     }
 
     public static void buildMaxHeapify(int[] a) {
@@ -56,13 +55,34 @@ public class HeapSort {
         }
     }
 
+    public static boolean isStable() {
+        return false;
+    }
+    
+    public static String showTimeComplexity() {
+        StringBuffer sb = new StringBuffer();
+        sb.append("Average: ");
+        sb.append("O(n*log2(n))\n");
+        sb.append("Best: ");
+        sb.append("O(n*log2(n))\n");
+        sb.append("Worst: ");
+        sb.append("O(n*log2(n))\n");
+        return sb.toString();
+    }
+
+    public static String showSpaceComplexity() {
+        return "O(1)";
+    }
     public static void main(String[] args) {
         int a[] = {1,3,4,5,7,9,2,4,6,8};
         sort(a);
         for (int e:
         a){
             System.out.print(e +", ");
+            System.out.print("\n");
         }
+
+        System.out.println(showTimeComplexity());
     }
 }
 
