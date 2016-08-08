@@ -11,6 +11,7 @@
         <module>../StringBuffer</module>
         <module>../StackUsingQueue</module>
         <module>../Tree</module>
+        <module>../Sort</module>
     </modules>
     <packaging>pom</packaging>
 
